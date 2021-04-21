@@ -1,0 +1,50 @@
+.form
+  max-width: 320px
+  padding: 2rem
+  border: 1px solid #CCCCCC
+  border-radius: 1rem
+  box-shadow: 0 1px 5px
+  background-color: #EEEEEE
+
+.fieldset
+  display: flex
+  border: none
+  flex-direction: column
+
+.legend
+  font-size: 3rem
+  font-weight: bold
+
+.login, .password, .remember, .signin, .help
+  font-size: inherit
+  color:  inherit
+  padding: 1rem
+  margin-top: 1rem
+
+.remember
+  display: flex
+  align-items: center
+
+  &__checkbox
+    margin-right: 1rem
+    width: 2rem
+    height: 2rem
+
+.signin
+  font-weight: bold
+  background: linear-gradient(0deg, #808887 0%, #E3E4F1 100%)
+  border: none
+
+  &:hover
+    opacity: .8
+
+  &:active
+    opacity: .5
+
+.help
+  width: min-content
+  margin-left: auto
+  background-color: transparent
+  border: none
+  outline: none
+  cursor: pointer
