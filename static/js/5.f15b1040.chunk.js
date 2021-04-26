@@ -1,0 +1,2 @@
+(this.webpackJsonpqex=this.webpackJsonpqex||[]).push([[5],{43:function(e,t,n){e.exports={page:"Index_page__2KU-D",title:"Index_title__s7xL8"}},50:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return i}));n(0);var s=n(43),a=n.n(s),c=n(1);function i(){return Object(c.jsxs)("main",{className:a.a.page,children:[Object(c.jsx)("h1",{className:a.a.title,children:"Index Page"}),Object(c.jsx)("img",{alt:"react logotype",src:"react.svg"})]})}}}]);
+//# sourceMappingURL=5.f15b1040.chunk.js.map
