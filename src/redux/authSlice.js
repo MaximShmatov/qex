@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isAuth: false,
-  processMessage: '',
+  authCounter: 0,
 };
 
 const sliderSlice = createSlice({
@@ -14,12 +14,12 @@ const sliderSlice = createSlice({
       state.isAuth = action.payload;
     },
 
-    setProcessMessage(state, action) {
-      state.processMessage = action.payload;
+    failAuthIncrement(state, action) {
+      state.authCounter += action.payload;
     },
 
   },
 });
 
-export const { setIsAuth, setProcessMessage } = sliderSlice.actions;
+export const { setIsAuth, setProcessMessage, failAuthIncrement } = sliderSlice.actions;
 export default sliderSlice.reducer;

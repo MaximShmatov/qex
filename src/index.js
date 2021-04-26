@@ -1,37 +1,16 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import store from './redux/store';
-import './index.sass';
+import App from './App';
 
-window.credentials = {
-  login: 'admin',
-  password: 'admin',
-};
-
-const Index = lazy(() => import('./pages/Index/Index'));
-const Profile = lazy(() => import('./pages/Profile/Profile'));
-const News = lazy(() => import('./pages/News/News'));
-const SignIn = lazy(() => import('./pages/SignIn/SignIn'));
+localStorage.setItem('name', 'admin');
+localStorage.setItem('password', 'admin');
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header/>
-          <Switch>
-            <Route exact path="/" component={Index}/>
-            <Route path="/profile" component={Profile}/>
-            <Route path="/news" component={News}/>
-            <Route path="/signin" component={SignIn}/>
-          </Switch>
-          <Footer/>
-        </Suspense>
-      </Router>
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

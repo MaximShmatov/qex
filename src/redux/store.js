@@ -1,9 +1,13 @@
 import { configureStore,  } from '@reduxjs/toolkit';
-import authForm from '../components/AuthForm/authFormSlice';
+import snackbar from './snackbarSlice';
+import auth from './authSlice';
+import news from './newsSlice';
 
 const store = configureStore({
   reducer: {
-    authForm,
+    snackbar,
+    auth,
+    news,
   },
 });
 

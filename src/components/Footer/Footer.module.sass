@@ -2,16 +2,22 @@
   display: flex
   justify-content: space-between
   align-items: center
+  flex-wrap: wrap
   border-top: 1px solid #AAAAAA
-  padding: 2rem
+  padding: 0 2rem
 
-.copyright
+.caption
+  padding: 2rem 0
+
+.icons
   display: flex
 
-  &__link
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 2rem
-    height: 2rem
-    margin-left: 20px
+.ref
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 2rem
+  height: 2rem
+
+  &:not(:last-of-type)
+    margin-right: 2rem
