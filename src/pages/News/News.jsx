@@ -14,7 +14,13 @@ export default function News() {
 
   if (!news.length) {
     fetchTopHeadlines('ru')
-      .then((data) => dispatch(setNewsList(data.articles)))
+      .then((data) => {
+        if (data.status === 'ok') {
+          dispatch(setNewsList(data.articles));
+        } else {
+          dispatch(setMessage(`${data.status}: limit reached )...`));
+        }
+      })
       .catch((error) => dispatch(setMessage(error.toString())));
   }
 
@@ -23,7 +29,13 @@ export default function News() {
     const keyword = event.target.elements.search.value;
     if (keyword !== '') {
       fetchFromKeywords(keyword)
-        .then((data) => dispatch(setNewsList(data.articles)))
+        .then((data) => {
+          if (data.status === 'ok') {
+            dispatch(setNewsList(data.articles));
+          } else {
+            dispatch(setMessage(`${data.status}: limit reached )...`));
+          }
+        })
         .catch((error) => dispatch(setMessage(error.toString())));
     }
   };

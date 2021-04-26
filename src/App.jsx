@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Snackbar from './components/Snackbar/Snackbar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer.jsx';
@@ -13,7 +13,7 @@ const SignIn = lazy(() => import('./pages/SignIn/SignIn'));
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Snackbar />
       <Header/>
       <Suspense fallback={<div>Loading...</div>}>
@@ -25,6 +25,6 @@ export default function App() {
         </Switch>
       </Suspense>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
