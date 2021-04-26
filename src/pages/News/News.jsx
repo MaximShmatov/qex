@@ -18,7 +18,7 @@ export default function News() {
         if (data.status === 'ok') {
           dispatch(setNewsList(data.articles));
         } else {
-          dispatch(setMessage(`${data.status}: limit reached )...`));
+          dispatch(setMessage(`${data.status}: limit reached...`));
         }
       })
       .catch((error) => dispatch(setMessage(error.toString())));
@@ -33,7 +33,7 @@ export default function News() {
           if (data.status === 'ok') {
             dispatch(setNewsList(data.articles));
           } else {
-            dispatch(setMessage(`${data.status}: limit reached )...`));
+            dispatch(setMessage(`${data.status}: limit reached...`));
           }
         })
         .catch((error) => dispatch(setMessage(error.toString())));

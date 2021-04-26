@@ -1,4 +1,4 @@
-const KEY = 'c76a3a8ef15c457cb5e909068bad444b';
+const KEY = 'ce03e39174374877b5dc588a9012459b';
 
 const baseURL = (path) => {
   const url = new URL('https://newsapi.org');
