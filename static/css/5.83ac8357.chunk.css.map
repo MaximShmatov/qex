@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/pages/Index/Index.module.sass"],"names":[],"mappings":"AAAA,mBACE,YAAa,CAAG,oBAGhB,iBAAkB","file":"5.83ac8357.chunk.css","sourcesContent":[".page {\n  padding: 2rem; }\n\n.title {\n  position: absolute; }\n"]}
